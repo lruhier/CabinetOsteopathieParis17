@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cabinet d'ostéopathie Paris 17 ouvert du lundi au samedi. Du nourisson à l'adulte. 06.78.40.97.40">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    <title>{% block title %}Ostéopathe Paris{% endblock %}</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet" media="all">
+
+    <!-- Google -->
+    <link rel="author" href="https://plus.google.com/108973402213918487976" />
+    <link rel="publisher" href="https://plus.google.com/108973402213918487976" />
+    <link href="https://plus.google.com/108973402213918487976" rel="publisher" />
+    <link rel="canonical" href="{{ url('app_'~template) }}" />
+
+    <!-- Facebook -->
+    <!-- <meta property="og:title" content="iAcquire’s awesome blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="http://www.iacquire.com/some-thumbnail.jpg" />
+    <meta property="og:url" content="http://blog.iacquire.com" />
+    <meta property="og:description" content="Stop hitting refresh on your ex-girlfriend’s Facebook page? You should check out the iAcquire blog and learn something instead" />
+    <meta property="fb:admins" content="USER_ID" /> -->
+
+    <!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
+    {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
+
+    <script type="text/javascript" async defer src="https://apis.google.com/js/platform.js?publisherid=113836698102981094669"></script>
+</head>
+<body>
+
+
+<div class="container-fluid center-block" id="mainframe">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand glyphicon glyphicon-home" href="{{ path('app_consulter') }}"><span class="sr-only">Quand consulter ?</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li {% if onglet in ['femmes','nourrissons','adolescents','adultes','sportifs'] %}class="active"{% endif %}><a data-toggle="dropdown" role="button" aria-expanded="false" href="#">Quand consulter ?</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li {% if onglet == 'femmes' %}class="active"{% endif %}><a href="{{ path('app_femmes') }}">Femmes enceintes</a></li>
+                            <li {% if onglet == 'nourrissons' %}class="active"{% endif %}><a href="{{ path('app_nourrissons') }}">Nourrissons</a></li>
+                            <li {% if onglet == 'adolescents' %}class="active"{% endif %}><a href="{{ path('app_adolescents') }}">Enfants et adolescent</a></li>
+                            <li {% if onglet == 'adultes' %}class="active"{% endif %}><a href="{{ path('app_adultes') }}">Adultes et séniors</a></li>
+                            <li {% if onglet == 'sportifs' %}class="active"{% endif %}><a href="{{ path('app_sportifs') }}">Sportifs</a></li>
+                        </ul>
+                    </li>
+                    <li {% if onglet == 'seance' %}class="active"{% endif %}><a href="{{ path('app_seance') }}">Déroulement d'une séance</a></li>
+                    <li {% if onglet == 'praticien' %}class="active"{% endif %}><a href="{{ path('app_praticien') }}">Le praticien</a></li>
+                    <li {% if onglet == 'tarif' %}class="active"{% endif %}><a href="{{ path('app_tarif') }}">Tarif et remboursements</a></li>
+                    <li {% if onglet == 'contact' %}class="active"{% endif %}><a href="{{ path('app_contact') }}">Contact</a></li>
+                    <li {% if onglet == 'adomicile' %}class="active"{% endif %}><a href="{{ path('app_adomicile') }}">Ostéopathie entreprise</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="clearfix">
+        <p id="headername">
+        Kentis Warren Armoogum<br/>
+        Ostéopathe D.O.<br/>
+        Du Nourrisson à l'Adulte
+        </p>
+        <ul class="list-unstyled">
+            <li><img src="/images/mobile24.png">06.78.40.97.40</li>
+            <li><img src="/images/opened16.png">armoogum.osteo@gmail.com</li>
+            <li><img src="/images/home16.png">44 rue de tocqueville, 75017 Paris</li>
+        </ul>
+    </header>
+
+    <div id="maincontent">{% block body %}{% endblock %}</div>
+
+</div>
+
+
+{% block javascript %}
+<!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
+<script src="{{ asset('js/jquery.js') }}"></script>
+<!-- Include all JavaScripts, compiled by Assetic -->
+<script src="{{ asset('js/bootstrap.js') }}"></script>
+<script src="{{ asset('js/map.js') }}"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60636808-1', 'auto');
+  ga('send', 'pageview');
+</script>
+{% endblock %}
+
+
+<!-- <p>En poursuivant votre navigation, vous acceptez l’utilisation de cookies pour vous proposer des services et des offres adaptés à vos centres d’intérêt et mesurer la fréquentation de nos services. Pour en savoir plus et paramétrer les cookies</p> -->
+
+</body>
+</html>

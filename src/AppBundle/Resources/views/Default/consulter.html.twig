@@ -1,0 +1,88 @@
+{% extends 'App/layout.html.twig' %}
+
+{% block title %}Quand consulter ?{% endblock %}
+
+{% block body %}
+
+
+<h2>Définition</h2>
+
+<p>L’ostéopathie est une méthode de soins utilisée pour le traitement et la prévention de nombreux 
+troubles fonctionnels qui peuvent altérer l’équilibre corporel du patient. Cette pratique utilise des 
+manipulations manuelles et nécessite une connaissance approfondie de la physiologie et de 
+l’anatomie humaine. </p>
+
+<h2>A qui ?</h2>
+<p>
+Adaptée à tous les publics, en fonction de son âge ou de sa morphologie, l’ostéopathie apporte sa 
+
+contribution aux femmes enceintes à partir du troisième mois, aux nourrissons, aux enfants, aux 
+
+adultes, aux personnes âgées et aux sportifs.     
+
+<blockquote><p><strong>N.B.</strong> même si vous ne présentez aucun symptôme,  il est fortement conseillé d’aller voir un 
+ostéopathe à titre préventif deux fois par an. Un bilan sera alors réalisé pour identifier d’éventuels 
+déséquilibres.</p>
+</blockquote>
+</p>
+
+
+<h2>Motif de consultation</h2>
+<div class="container-fluid" id="consultationframe">
+  <div class="row">
+    <div class="col-sm-12 col-md-12">
+        <a href="{{ path('app_femmes') }}">Femmes enceintes</a>
+    </div>
+    <div class="col-sm-12 col-md-12">
+        <a href="{{ path('app_nourrissons') }}">Nourrissons</a>
+    </div>
+    <div class="col-sm-12 col-md-12">
+        <a href="{{ path('app_adolescents') }}">Enfants et adolescents<br/></a>
+    </div>
+    <div class="col-sm-12 col-md-12">
+        <a href="{{ path('app_adultes') }}">Adultes et seniors</a>
+    </div>
+    <div class="col-sm-12 col-md-12">
+        <a href="{{ path('app_sportifs') }}">Sportifs</a>
+    </div>
+  </div>
+</div>
+
+{#
+
+<div class="container-fluid" id="consultationframe">
+  <div class="row">
+    <div class="col-sm-4 col-md-4">
+        <a href="{{ path('app_femmes') }}">Femmes enceintes<br/>
+            <img class="img-responsive img-circle center-block" src="/images/femme_enceinte_osteo.jpg" alt="consultation femmes enceintes" />
+        </a>
+    </div>
+    <div class="col-sm-4 col-md-4">
+        <a href="{{ path('app_nourrissons') }}">Nourrissons<br/>
+            <img class="img-responsive img-circle center-block" src="/images/78b.jpg" alt="consultation nourrissons" />
+        </a>
+    </div>
+    <div class="col-sm-4 col-md-4">
+        <a href="{{ path('app_adolescents') }}">Enfants et adolescents<br/>
+            <img class="img-responsive img-circle center-block" src="/images/78b.jpg" alt="consultation enfants et adolescents" />
+        </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2 col-md-2"></div>
+    <div class="col-sm-4 col-md-4">
+        <a href="{{ path('app_adultes') }}">Adultes et seniors</span><br/>
+            <img class="img-responsive img-circle center-block" src="/images/78b.jpg" alt="consultation adultes et séniors" />
+        </a>
+    </div>
+    <div class="col-sm-4 col-md-4">
+        <a href="{{ path('app_sportifs') }}">Sportifs<br/>
+            <img class="img-responsive img-circle center-block" src="/images/78b.jpg" alt="consultation sportifs" />
+        </a>
+    </div>
+    <div class="col-sm-2 col-md-2" />
+  </div>
+</div>
+#}
+
+{% endblock %}
