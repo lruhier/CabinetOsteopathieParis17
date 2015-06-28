@@ -16,8 +16,8 @@ if ($res !== TRUE) throw new \Exception('Extraction failed');
 $zip->extractTo('../');
 $zip->close();
 
-$dir = realpath('../app/cache/prod');
-$tmpdir = realpath(uniqid('../app/cache/prod'));
+$dir = realpath('../cache/prod');
+$tmpdir = realpath(uniqid('../cache/prod'));
 if (!rename($dir, $tmpdir)) throw new \Exception('Clear cache failed');
 
 $files = new RecursiveIteratorIterator(
