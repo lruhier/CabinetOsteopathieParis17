@@ -10,10 +10,11 @@ header div { float:left; }
 header { margin-bottom:20px; }
 #headername {}
 #headeradresse { margin-left:100px; }
+#consultationframe { margin-left:20px; }
 #consultationframe img { max-width:200px; }
 
 h1 { font-size:18px; font-weight:bold; }
-h2 { font-size:16px; font-weight:bold; }
+h2 { font-size:16px; font-weight:bold; margin-left:20px; font-style: italic; }
 h3 { font-size:14px; font-weight:bold; }
 header ul img { margin-right:5px; }
 header ul li:first-child img { margin-left:-9px; }

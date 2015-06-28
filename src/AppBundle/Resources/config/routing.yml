@@ -1,47 +1,71 @@
 app_index:
     path:      /
     defaults:  { _controller: AppBundle:Default:index, template: consulter, onglet: consulter }
+    options:
+        sitemap: true
 
 app_seance:
     path:      /deroulement-d-une-seance.html
     defaults:  { _controller: AppBundle:Default:index, template: seance, onglet: seance }
+    options:
+        sitemap: true
 
 app_praticien:
-    path:      /le-praticien-ostéopathe.html
+    path:      /le-praticien-osteopathe.html
     defaults:  { _controller: AppBundle:Default:index, template: praticien, onglet: praticien }
+    options:
+        sitemap: true
 
 app_tarif:
     path:      /tarif-et-remboursement.html
     defaults:  { _controller: AppBundle:Default:index, template: tarif, onglet: tarif }
+    options:
+        sitemap: true
 
 app_consulter:
     path:      /osteopathie-quand-consulter.html
     defaults:  { _controller: AppBundle:Default:index, template: consulter, onglet: consulter }
+    options:
+        sitemap: true
 
 app_contact:
     path:      /contact.html
     defaults:  { _controller: AppBundle:Default:index, template: contact, onglet: contact }
+    options:
+        sitemap: true
 
 app_adomicile:
-    path:      /ostéopathie-entreprise.html
+    path:      /osteopathie-entreprise.html
     defaults:  { _controller: AppBundle:Default:index, template: adomicile, onglet: adomicile }
+    options:
+        sitemap: true
 
 app_femmes:
     path:      /quand-consulter/femmes-enceintes.html
     defaults:  { _controller: AppBundle:Default:index, template: femmes, onglet: femmes }
+    options:
+        sitemap: true
 
 app_nourrissons:
     path:      /quand-consulter/nourrissons.html
     defaults:  { _controller: AppBundle:Default:index, template: nourrissons, onglet: nourrissons }
+    options:
+        sitemap: true
 
 app_adolescents:
     path:      /quand-consulter/enfants-et-adolescents.html
     defaults:  { _controller: AppBundle:Default:index, template: adolescents, onglet: adolescents }
+    options:
+        sitemap: true
 
 app_adultes:
     path:      /quand-consulter/adultes-et-seniors.html
     defaults:  { _controller: AppBundle:Default:index, template: adultes, onglet: adultes }
+    options:
+        sitemap: true
 
 app_sportifs:
     path:      /quand-consulter/sportifs.html
     defaults:  { _controller: AppBundle:Default:index, template: sportifs, onglet: sportifs }
+    options:
+        sitemap: true

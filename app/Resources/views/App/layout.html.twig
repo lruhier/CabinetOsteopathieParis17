@@ -2,18 +2,16 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Cabinet d'ostéopathie Paris 17 ouvert du lundi au samedi. Du nourisson à l'adulte. 06.78.40.97.40">
+    <meta name="country" content='France' />
+    <meta name="geo.position" content='48.8840759;2.3120439' />
+    <meta name="geo.country" content='FR' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content='fr' />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
     <title>{% block title %}Ostéopathe Paris{% endblock %}</title>
-
-    <!-- Bootstrap -->
-    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="all">
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet" media="all">
-
-    <!-- Google -->
     <link rel="author" href="https://plus.google.com/108973402213918487976" />
     <link rel="publisher" href="https://plus.google.com/108973402213918487976" />
     <link href="https://plus.google.com/108973402213918487976" rel="publisher" />
@@ -26,6 +24,13 @@
     <meta property="og:url" content="http://blog.iacquire.com" />
     <meta property="og:description" content="Stop hitting refresh on your ex-girlfriend’s Facebook page? You should check out the iAcquire blog and learn something instead" />
     <meta property="fb:admins" content="USER_ID" /> -->
+
+    {% stylesheets
+        'css/bootstrap.css'
+        'css/main.css'
+        filter='cssrewrite' filter='?uglifycss' output='css/compiled/app.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
 
     <!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
     {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
@@ -67,16 +72,19 @@
         </div>
     </nav>
 
-    <header class="clearfix">
+    <header class="clearfix" itemscope itemtype="http://schema.org/LocalBusiness">
         <p id="headername">
-        Kentis Warren Armoogum<br/>
-        Ostéopathe D.O.<br/>
+        <span>Kentis Warren Armoogum</span><br/>
+        <span itemprop="name">Ostéopathe D.O.</span><br/>
         Du Nourrisson à l'Adulte
         </p>
         <ul class="list-unstyled">
-            <li><img src="/images/mobile24.png">06.78.40.97.40</li>
-            <li><img src="/images/opened16.png">armoogum.osteo@gmail.com</li>
-            <li><img src="/images/home16.png">44 rue de tocqueville, 75017 Paris</li>
+            <li itemprop="telephone"><img src="/images/mobile24.png" alt="Téléphone"/>06.78.40.97.40</li>
+            <li itemprop="email"><img src="/images/opened16.png" alt="Email"/>armoogum.osteo@gmail.com</li>
+            <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><img src="/images/home16.png" alt="Adresse du cabinet"/>
+            <span itemprop="streetAddress">44 rue de tocqueville</span>,
+            <span itemprop="postalCode">75017</span>
+            <span itemprop="addressLocality">Paris</span></li>
         </ul>
     </header>
 
@@ -85,12 +93,14 @@
 </div>
 
 
-{% block javascript %}
-<!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
-<script src="{{ asset('js/jquery.js') }}"></script>
-<!-- Include all JavaScripts, compiled by Assetic -->
-<script src="{{ asset('js/bootstrap.js') }}"></script>
-<script src="{{ asset('js/map.js') }}"></script>
+{% javascripts
+    'js/jquery.js'
+    'js/bootstrap.js'
+    'js/map.js'
+    filter='?uglifyjs2' output='js/compiled/app.js' %}
+    <script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -100,8 +110,6 @@
   ga('create', 'UA-60636808-1', 'auto');
   ga('send', 'pageview');
 </script>
-{% endblock %}
-
 
 <!-- <p>En poursuivant votre navigation, vous acceptez l’utilisation de cookies pour vous proposer des services et des offres adaptés à vos centres d’intérêt et mesurer la fréquentation de nos services. Pour en savoir plus et paramétrer les cookies</p> -->
 
