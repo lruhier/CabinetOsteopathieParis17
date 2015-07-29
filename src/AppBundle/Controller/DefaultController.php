@@ -19,7 +19,7 @@ class DefaultController extends Controller
 		$response->setPublic();
 		$response->setMaxAge(600);
 		$response->setSharedMaxAge(600);
-		$response->headers->addCacheControlDirective('must-revalidate', true);
+		//$response->headers->addCacheControlDirective('must-revalidate', true);
 
         return $response;
     }

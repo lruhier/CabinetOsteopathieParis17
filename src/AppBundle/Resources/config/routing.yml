@@ -5,67 +5,67 @@ app_index:
         sitemap: true
 
 app_seance:
-    path:      /deroulement-d-une-seance.html
+    path:      /deroulement-seance-cabinet-osteopathie-paris-75017.html
     defaults:  { _controller: AppBundle:Default:index, template: seance, onglet: seance }
     options:
         sitemap: true
 
 app_praticien:
-    path:      /le-praticien-osteopathe.html
+    path:      /le-praticien-osteopathe-cabinet-osteopathie-paris-75017.html
     defaults:  { _controller: AppBundle:Default:index, template: praticien, onglet: praticien }
     options:
         sitemap: true
 
 app_tarif:
-    path:      /tarif-et-remboursement.html
+    path:      /tarif-et-remboursement-cabinet-osteopathie-paris-75017.html
     defaults:  { _controller: AppBundle:Default:index, template: tarif, onglet: tarif }
     options:
         sitemap: true
 
-app_consulter:
-    path:      /osteopathie-quand-consulter.html
-    defaults:  { _controller: AppBundle:Default:index, template: consulter, onglet: consulter }
-    options:
-        sitemap: true
-
 app_contact:
-    path:      /contact.html
+    path:      /contact-cabinet-osteopathie-paris-75017.html
     defaults:  { _controller: AppBundle:Default:index, template: contact, onglet: contact }
     options:
         sitemap: true
 
 app_adomicile:
-    path:      /osteopathie-entreprise.html
+    path:      /pour-les-entreprises-cabinet-osteopathie-paris-75017.html
     defaults:  { _controller: AppBundle:Default:index, template: adomicile, onglet: adomicile }
     options:
         sitemap: true
 
+app_consulter:
+    path:      /quand-consulter-cabinet-osteopathie-paris-75017.html
+    defaults:  { _controller: AppBundle:Default:index, template: consulter, onglet: consulter }
+    options:
+        sitemap: true
+
 app_femmes:
-    path:      /quand-consulter/femmes-enceintes.html
+    path:      /quand-consulter-cabinet-osteopathie-paris-75017/femmes-enceintes.html
     defaults:  { _controller: AppBundle:Default:index, template: femmes, onglet: femmes }
     options:
         sitemap: true
 
 app_nourrissons:
-    path:      /quand-consulter/nourrissons.html
+    path:      /quand-consulter-cabinet-osteopathie-paris-75017/nourrissons.html
     defaults:  { _controller: AppBundle:Default:index, template: nourrissons, onglet: nourrissons }
     options:
         sitemap: true
 
 app_adolescents:
-    path:      /quand-consulter/enfants-et-adolescents.html
+    path:      /quand-consulter-cabinet-osteopathie-paris-75017/enfants-et-adolescents.html
     defaults:  { _controller: AppBundle:Default:index, template: adolescents, onglet: adolescents }
     options:
         sitemap: true
 
 app_adultes:
-    path:      /quand-consulter/adultes-et-seniors.html
+    path:      /quand-consulter-cabinet-osteopathie-paris-75017/adultes-et-seniors.html
     defaults:  { _controller: AppBundle:Default:index, template: adultes, onglet: adultes }
     options:
         sitemap: true
 
 app_sportifs:
-    path:      /quand-consulter/sportifs.html
+    path:      /quand-consulter-cabinet-osteopathie-paris-75017/sportifs.html
     defaults:  { _controller: AppBundle:Default:index, template: sportifs, onglet: sportifs }
     options:
         sitemap: true
