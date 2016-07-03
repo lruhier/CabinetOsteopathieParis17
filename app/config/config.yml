@@ -38,8 +38,8 @@ assetic:
     bundles:        [ ]
     filters:
         less:
-            node: node
-            node_paths: [ "C:\\Users\\YOYO\\AppData\\Roaming\\npm\\node_modules" ]
+            node: '/usr/bin/nodejs'
+            node_paths: [ "%kernel.root_dir%/Resources/node_modules" ]
             apply_to: "\.less$"
         cssrewrite: ~
         uglifyjs2:
