@@ -15,7 +15,7 @@ class TestController extends Controller
     	$h2 = $request->attributes->get('h2');
         $max = 200;
         $response = $this->render('AppBundle:Test:test.html.twig', ['max' => $max]);
-        for ($i = 1; $i <= $max; $i++) {
+        if ($h2) for ($i = 1; $i <= $max; $i++) {
             header("Link: </images/{$i}.jpg>; rel=preload; as=image", false);
         }
 
