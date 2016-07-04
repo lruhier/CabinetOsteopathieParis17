@@ -69,3 +69,12 @@ app_sportifs:
     defaults:  { _controller: AppBundle:Default:index, template: sportifs, onglet: sportifs }
     options:
         sitemap: true
+
+app_test:
+    path:     /test.html
+    defaults: { _controller: AppBundle:Test:index, h2: false }
+
+app_testh2:
+    path:    /testh2.html
+    defaults: { _controller: AppBundle:Test:index, h2: true }
+
