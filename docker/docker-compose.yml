@@ -1,0 +1,15 @@
+osteopathie:
+    container_name: osteopathie
+    build: osteopathie/
+    ports:
+        - "80:80"
+ftp:
+    container_name: ftp
+    image: atmoz/sftp
+    volumes_from:
+        - osteopathie:rw
+    ports:
+        - "2222:22"
+    command: osteo:osteo:1001
+
+   
